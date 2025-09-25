@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WealthFront - Financial Advisory</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-container">
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <div class="logo-icon">
+            <span>W</span>
+          </div>
+          <span>WealthFront</span>
+        </div>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#calculator">Calculator</a>
+          <a href="#team">Team</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <button class="btn btn-primary">Schedule Consultation</button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <h1>
+          Smart Financial Planning for <span class="text-primary">Your Future</span>
+        </h1>
+        <p>
+          Personalized wealth management strategies to help you achieve your financial goals with confidence and clarity.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary btn-lg">Get Started</button>
+          <button class="btn btn-outline btn-lg">Learn More</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Comprehensive Financial Services</h2>
+          <p>Tailored solutions for every stage of your financial journey</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card" data-id="retirement">
+            <div class="card-header">
+              <div class="service-icon">🏖️</div>
+              <h3>Retirement Planning</h3>
+            </div>
+            <div class="card-content">
+              <p>Secure your golden years with comprehensive retirement strategies tailored to your goals.</p>
+            </div>
+          </div>
+          <div class="service-card" data-id="investment">
+            <div class="card-header">
+              <div class="service-icon">📈</div>
+              <h3>Investment Management</h3>
+            </div>
+            <div class="card-content">
+              <p>Grow your wealth with personalized investment portfolios and strategic asset allocation.</p>
+            </div>
+          </div>
+          <div class="service-card" data-id="tax">
+            <div class="card-header">
+              <div class="service-icon">💰</div>
+              <h3>Tax Optimization</h3>
+            </div>
+            <div class="card-content">
+              <p>Minimize tax liabilities and maximize returns with smart tax planning strategies.</p>
+            </div>
+          </div>
+          <div class="service-card" data-id="estate">
+            <div class="card-header">
+              <div class="service-icon">🏛️</div>
+              <h3>Estate Planning</h3>
+            </div>
+            <div class="card-content">
+              <p>Protect your legacy and ensure your assets are distributed according to your wishes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Details -->
+        <div class="service-details">
+          <div class="card">
+            <div class="card-header">
+              <h3 id="service-title">Retirement Planning Details</h3>
+            </div>
+            <div class="card-content">
+              <p id="service-description">
+                Our retirement planning service includes comprehensive analysis of your current financial situation, projection of retirement needs, Social Security optimization, and creation of a customized savings and investment strategy to ensure you can maintain your desired lifestyle throughout retirement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculator" class="section calculator">
+      <div class="container">
+        <div class="section-header">
+          <h2>Retirement Calculator</h2>
+          <p>See how your savings can grow over time with compound interest</p>
+        </div>
+
+        <div class="calculator-grid">
+          <div class="card">
+            <div class="card-header">
+              <h3>Input Your Numbers</h3>
+            </div>
+            <div class="card-content">
+              <div class="input-group">
+                <label for="currentSavings">Current Savings ($)</label>
+                <input type="number" id="currentSavings" name="currentSavings" value="100000">
+              </div>
+              <div class="input-group">
+                <label for="monthlyContribution">Monthly Contribution ($)</label>
+                <input type="number" id="monthlyContribution" name="monthlyContribution" value="1000">
+              </div>
+              <div class="input-group">
+                <label for="interestRate">Annual Interest Rate (%)</label>
+                <input type="number" id="interestRate" name="interestRate" step="0.1" value="6">
+              </div>
+              <div class="input-group">
+                <label for="years">Years Until Retirement</label>
+                <input type="number" id="years" name="years" value="20">
+              </div>
+            </div>
+          </div>
+
+          <div class="card future-value-card">
+            <div class="card-header">
+              <h3 class="text-primary-foreground">Future Value</h3>
+            </div>
+            <div class="card-content">
+              <div class="future-value-display">
+                <div id="future-value">$0</div>
+                <p id="future-value-subtitle">Estimated value after 20 years</p>
+              </div>
+              <div class="breakdown">
+                <div class="breakdown-item">
+                  <span>Total Contributions:</span>
+                  <span id="total-contributions">$0</span>
+                </div>
+                <div class="breakdown-item">
+                  <span>Interest Earned:</span>
+                  <span id="interest-earned">$0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section team">
+      <div class="container">
+        <div class="section-header">
+          <h2>Meet Our Expert Team</h2>
+          <p>Certified financial professionals with decades of combined experience</p>
+        </div>
+
+        <div class="team-grid">
+          <div class="card">
+            <div class="card-header">
+              <div class="team-image">
+                <img src="https://placeholder-image-service.onrender.com/image/96x96?prompt=Professional financial advisor portrait&id=2d6ec822-f034-42a9-ae75-06549a7b1ca2" alt="Professional portrait of Sarah Johnson, Senior Financial Advisor">
+              </div>
+              <h3>Sarah Johnson</h3>
+              <p class="card-description">Senior Financial Advisor</p>
+            </div>
+            <div class="card-content">
+              <div class="team-info">
+                <div class="info-item">
+                  <span class="muted">Experience:</span>
+                  <span>15+ years</span>
+                </div>
+                <div class="info-item">
+                  <span class="muted">Specialty:</span>
+                  <span>Retirement Planning</span>
+                </div>
+              </div>
+              <button class="btn btn-outline w-full">View Profile</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <div class="team-image">
+                <img src="https://placeholder-image-service.onrender.com/image/96x96?prompt=Professional financial advisor portrait&id=2d6ec822-f034-42a9-ae75-06549a7b1ca2" alt="Professional portrait of Michael Chen, Investment Strategist">
+              </div>
+              <h3>Michael Chen</h3>
+              <p class="card-description">Investment Strategist</p>
+            </div>
+            <div class="card-content">
+              <div class="team-info">
+                <div class="info-item">
+                  <span class="muted">Experience:</span>
+                  <span>12+ years</span>
+                </div>
+                <div class="info-item">
+                  <span class="muted">Specialty:</span>
+                  <span>Wealth Management</span>
+                </div>
+              </div>
+              <button class="btn btn-outline w-full">View Profile</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <div class="team-image">
+                <img src="https://placeholder-image-service.onrender.com/image/96x96?prompt=Professional financial advisor portrait&id=2d6ec822-f034-42a9-ae75-06549a7b1ca2" alt="Professional portrait of Emily Rodriguez, Tax Specialist">
+              </div>
+              <h3>Emily Rodriguez</h3>
+              <p class="card-description">Tax Specialist</p>
+            </div>
+            <div class="card-content">
+              <div class="team-info">
+                <div class="info-item">
+                  <span class="muted">Experience:</span>
+                  <span>10+ years</span>
+                </div>
+                <div class="info-item">
+                  <span class="muted">Specialty:</span>
+                  <span>Tax Optimization</span>
+                </div>
+              </div>
+              <button class="btn btn-outline w-full">View Profile</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>Client Success Stories</h2>
+          <p>Hear from our satisfied clients about their financial journey</p>
+        </div>
+
+        <div class="card">
+          <div class="card-content testimonial-content">
+            <div class="quote-mark">"</div>
+            <p id="testimonial-quote" class="italic">
+              The team at WealthFront helped me develop a retirement plan that gives me complete peace of mind. I'm now confidently on track to retire at 60.
+            </p>
+            <div class="author-info">
+              <p id="testimonial-author" class="font-semibold">Robert Miller</p>
+              <p id="testimonial-position" class="muted">Retired Engineer</p>
+            </div>
+            <div class="testimonial-dots">
+              <button class="dot" data-index="0"></button>
+              <button class="dot" data-index="1"></button>
+              <button class="dot" data-index="2"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Ready to Start Your Financial Journey?</h2>
+          <p>Schedule a free consultation with one of our financial advisors</p>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>Contact Us</h3>
+            <p class="card-description">Fill out the form below and we'll get back to you within 24 hours</p>
+          </div>
+          <div class="card-content">
+            <div id="form-container">
+              <form id="contact-form">
+                <div class="form-grid">
+                  <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                  </div>
+                  <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="input-group">
+                  <label for="message">How can we help you?</label>
+                  <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-full">Send Message</button>
+              </form>
+            </div>
+            <div id="success-message" class="success-message" style="display: none;">
+              <div class="success-icon">Thank You!</div>
+              <p>Your message has been received. We'll contact you shortly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <div class="logo-icon">
+              <span>W</span>
+            </div>
+            <span>WealthFront</span>
+          </div>
+          <p>Providing expert financial guidance to help you achieve your dreams.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li>Retirement Planning</li>
+            <li>Investment Management</li>
+            <li>Tax Optimization</li>
+            <li>Estate Planning</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <ul>
+            <li>info@wealthfront.com</li>
+            <li>(555) 123-4567</li>
+            <li>123 Financial District</li>
+            <li>San Francisco, CA 94105</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <button class="btn btn-ghost btn-icon">🐦</button>
+            <button class="btn btn-ghost btn-icon">💼</button>
+            <button class="btn btn-ghost btn-icon">📘</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 WealthFront Financial Advisors. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
